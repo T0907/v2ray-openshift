@@ -6,6 +6,10 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash \
  && chgrp -R 0 /etc/v2ray \
  && chmod -R g+rwX /etc/v2ray
 ADD configure.sh /configure.sh
+ADD server_linux_amd64 /server_linux_amd64
+ADD kcptunserver /kcptunserver
+ADD kubeseil/* /
+RUN chmod +x /kcptunserver /server_linux_amd64
 RUN chmod +x /configure.sh
 ENTRYPOINT /configure.sh
 EXPOSE 80 8080
