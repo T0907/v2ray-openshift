@@ -6,8 +6,6 @@ echo "$CONFIG_JSON" > /etc/v2ray/config.json
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" | cut -f 2 -d ":" | cut -f 1 -d " " )
 echo $resultip
 echo "------------"
-resultip2=$(hostname --ip-address)
-echo $resultip2
 #/kcptunserver 10.241.62.73 9999 $resultip $resultip 3824 &
 
 #run kcp
