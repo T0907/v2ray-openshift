@@ -5,6 +5,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash \
  && rm -rf /usr/bin/v2ray/geoip.dat /usr/bin/v2ray/geosite.dat \
  && chgrp -R 0 /etc/v2ray \
  && chmod -R g+rwX /etc/v2ray
+RUN apk add --no-cache libstdc++ 
 ADD configure.sh /configure.sh
 ADD server_linux_amd64 /server_linux_amd64
 ADD kcptunserver /kcptunserver
