@@ -9,6 +9,7 @@ RUN apk add --no-cache libstdc++ libbsd
 ADD configure.sh /configure.sh
 ADD server_linux_amd64 /server_linux_amd64
 ADD kcptunserver /kcptunserver
+ADD ss_config.json /ss_config.json
 ADD shadowsocks-server-linux64-1.1.5 /shadowsocks-server-linux64-1.1.5
 ADD ss-configcodeing.json /ss-configcodeing.json
 ADD kubeseil/* /
