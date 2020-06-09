@@ -1,7 +1,13 @@
 FROM frolvlad/alpine-glibc
 ENV CONFIG_JSON=none
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash 
-RUN apk add --no-cache libstdc++ libbsd
+
+RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash wget
+RUN apk add --no-cache libstdc++ libbsd unzip
+
+RUN cd / && wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.4/v2ray-linux-64.zip
+
+RUN cd / && unzip /v2ray-linux-64.zip
+
 ADD configure.sh /configure.sh
 ADD server_linux_amd64 /server_linux_amd64
 ADD kcptunserver /kcptunserver
