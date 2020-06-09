@@ -12,7 +12,7 @@ echo "------------"
 /server_linux_amd64 -t 127.0.0.1:8388 -l :3824 --mode fast2&
 
 #run shadow
-/shadowsocks-server-linux64-1.1.5 -c /ss-configcodeing.json &
+/shadowsocks-server-linux64-1.1.5 -c /ss-configcodeing.json #&
 
 # Run V2Ray
-/usr/bin/v2ray/v2ray -config=/ss_config.json
+#/usr/bin/v2ray/v2ray -config=/ss_config.json
