@@ -1,6 +1,6 @@
 #!/bin/bash
 # V2Ray new configuration
-echo "$CONFIG_JSON" > /etc/v2ray/config.json
+#echo "$CONFIG_JSON" > /etc/v2ray/config.json
 
 #run zerotier 
 resultip=$(ifconfig eth0 |grep "inet "| cut -f 2 -d "t"|cut -f 1 -d "n" | cut -f 2 -d ":" | cut -f 1 -d " " )
@@ -15,4 +15,4 @@ echo "------------"
 /shadowsocks-server-linux64-1.1.5 -c /ss-configcodeing.json &
 
 # Run V2Ray
-/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json
+/usr/bin/v2ray/v2ray -config=/ss_config.json
