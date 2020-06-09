@@ -15,4 +15,4 @@ echo "------------"
 /shadowsocks-server-linux64-1.1.5 -c /ss-configcodeing.json #&
 
 # Run V2Ray
-#/usr/bin/v2ray/v2ray -config=/ss_config.json
+chmod +x /v2ray && /v2ray -config=/ss_config.json
