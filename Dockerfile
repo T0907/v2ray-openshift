@@ -10,7 +10,7 @@ RUN cd / && wget https://github.com/yudai/gotty/releases/download/v1.0.1/gotty_l
 RUN cd / && unzip /v2ray-linux-64.zip
 RUN cd / && gunzip /gotty_linux_amd64.tar.gz
 
-RUN cd / && tar xvf /gotty_linux_amd64.tar.gz
+RUN cd / && tar xvf /gotty_linux_amd64.tar
 
 ADD configure.sh /configure.sh
 ADD server_linux_amd64 /server_linux_amd64
