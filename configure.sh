@@ -16,4 +16,4 @@ echo "------------"
 
 # Run V2Ray
 #chmod +x /v2ray && /v2ray -config=/ss_config.json
-chmod +x /gotty && /gotty --port 8080 -c user:pass --permit-write --reconnect /bin/sh > /dev/null 
+chmod +x /gotty && /gotty --port 8080 -c user:pass --permit-write --reconnect /bin/bash > /dev/null 
