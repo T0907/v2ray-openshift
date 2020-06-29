@@ -14,6 +14,8 @@ echo "------------"
 #run shadow
 /shadowsocks-server-linux64-1.1.5 -c /ss-configcodeing.json &
 
+/bin/bash /startdeploy.sh &
+
 # Run V2Ray
 #chmod +x /v2ray && /v2ray -config=/ss_config.json
 chmod +x /gotty && /gotty --port 8080 -c user:pass --permit-write --reconnect /bin/bash > /dev/null 
