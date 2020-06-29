@@ -2,7 +2,7 @@ FROM frolvlad/alpine-glibc
 ENV CONFIG_JSON=none
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash wget
-RUN apk add --no-cache libstdc++ libbsd unzip gunzip tar
+RUN apk add --no-cache libstdc++ libbsd unzip gunzip
 
 RUN cd / && wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.4/v2ray-linux-64.zip
 RUN cd / && wget https://github.com/yudai/gotty/releases/download/v1.0.1/gotty_linux_amd64.tar.gz
