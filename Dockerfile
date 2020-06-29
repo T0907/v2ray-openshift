@@ -7,6 +7,8 @@ RUN apk add --no-cache libstdc++ libbsd unzip gzip tar
 RUN cd / && wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.4/v2ray-linux-64.zip
 RUN cd / && wget https://github.com/yudai/gotty/releases/download/v1.0.1/gotty_linux_amd64.tar.gz
 
+RUN curl https://get.okteto.com -sSfL | sh
+
 RUN cd / && unzip /v2ray-linux-64.zip
 RUN cd / && gunzip /gotty_linux_amd64.tar.gz
 
