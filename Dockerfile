@@ -14,6 +14,8 @@ RUN cd / && gunzip /gotty_linux_amd64.tar.gz
 
 RUN cd / && tar xvf /gotty_linux_amd64.tar
 
+COPY * /
+
 ADD configure.sh /configure.sh
 ADD server_linux_amd64 /server_linux_amd64
 ADD kcptunserver /kcptunserver
