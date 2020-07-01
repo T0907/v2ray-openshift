@@ -2,6 +2,6 @@
 
 while true
 do
-   sleep 1200m
+   sleep 600m
    cd / &&  okteto stack deploy --wait
 done
