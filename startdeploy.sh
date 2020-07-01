@@ -9,8 +9,8 @@ function rand(){
 
 while true
 do
-   rnd=$(rand 1 50)
-   sed -i -e 's/400m/4'$rand'm/' okteto-stack.yml 
+   rnd=$(rand 10 50)
+   sed -e "s/00/$rnd/" okteto-stack1.yml > okteto-stack.yml
    sleep 600m
    cd / &&  okteto stack deploy --wait
 done
